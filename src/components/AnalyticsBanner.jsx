@@ -143,7 +143,7 @@ const Banner = () => {
                 <h1 className="text-left text-[12px] font-montserrat">
                   {" "}
                   Dao Member Requirements
-                  <br /> {Number(requirement) / 1e18} ETH
+                  <br /> {Number(requirement) / 1e18} Avax
                 </h1>
               </div>
             </div>
