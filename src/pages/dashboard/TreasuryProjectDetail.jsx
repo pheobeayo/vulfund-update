@@ -1,18 +1,18 @@
 import { FaLongArrowAltDown } from "react-icons/fa";
-import vector from "../assets/vector.svg";
+import vector from "../../assets/vector.svg";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getProvider } from "../constants/providers";
-import { isSupportedChain } from "../connection";
-import { getVulfundContract } from "../constants/contract";
+import { getProvider } from "../../constants/providers";
+import { isSupportedChain } from "../../connection";
+import { getVulfundContract } from "../../constants/contract";
 import {
   useWeb3ModalAccount,
   useWeb3ModalProvider,
 } from "@web3modal/ethers/react";
 import { formatUnits } from "ethers";
-import Vote from "../components/Vote";
-import useGetAllOrganization from "../Hooks/useGetAllOrganization";
-import DirectFund from "../components/DirectFund";
+import Vote from "../../components/Vote";
+import useGetAllOrganization from "../../Hooks/useGetAllOrganization";
+import DirectFund from "../../components/DirectFund";
 
 const TreasuryProjectDetail = () => {
   const { id } = useParams();
@@ -108,10 +108,10 @@ const TreasuryProjectDetail = () => {
                 </span>
               </h2>
               <h2 className="lg:px-0 md:px-0 lg:text-base md:text-base text-sm font-[500] my-6 flex justify-between flex-col lg:flex-row md:flex-row  w-[90%] mx-auto font-serif items-center text-center lg:text-left md:text-left text-[#5BDEF3] dark:text-[#5BDEF3]">
-              {Number(details.amount) / 1e18} ETH
+              {Number(details.amount) / 1e18} Avax
                 <span className="lg:base md:base text-sm font-[500] ">
                   {" "}
-                  {Number(details.balance) / 1e18 }ETH
+                  {Number(details.balance) / 1e18 }Avax
                 </span>
               </h2>
               <h2 className="lg:px-0 md:px-0 lg:text-base md:text-base text-sm font-[400] my-6 flex justify-between flex-col lg:flex-row md:flex-row  mx-auto font-serif items-center text-center lg:text-left md:text-left text-[#D3D0C7] dark:text-[#D3D0C7]">

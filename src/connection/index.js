@@ -1,15 +1,15 @@
 import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react'
 
-export const SUPPORTED_CHAIN = 59141;
+export const SUPPORTED_CHAIN = 43113;
 
 export const isSupportedChain = (chainId) =>
   Number(chainId) === SUPPORTED_CHAIN;
 
-const LineaSepolia = {
+const AvalancheFuji = {
   chainId: SUPPORTED_CHAIN,
-  name: "Linea Sepolia",
-  currency: "ETH",
-  explorerUrl: "https://explorer.sepolia.linea.build/",
+  name: "Avalanche Fuji",
+  currency: "Avax",
+  explorerUrl: "https://testnet.snowtrace.io/",
   rpcUrl: import.meta.env.VITE_INFURA_RPC,
 };
 
@@ -22,7 +22,7 @@ const metadata = {
 
 export const configWeb3Modal = () => createWeb3Modal({
   ethersConfig: defaultConfig({ metadata }),
-  chains: [LineaSepolia],
+  chains: [AvalancheFuji],
   projectId: import.meta.env.VITE_PROJECTID,
   enableAnalytics: false,
   themeVariables: {

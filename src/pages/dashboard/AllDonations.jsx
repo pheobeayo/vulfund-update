@@ -53,7 +53,7 @@ const AllDonations = () => {
             {" "}
             Total Donations(YTD)
             <br />
-            0.002 ETH
+            0.002 Avax
           </h1>
       </div>
       </section>

@@ -13,7 +13,7 @@ const FundingRequests = () => {
     }
     return url || "";
   };
-  console.log(allProposals)
+  // console.log(allProposals)
 
   return (
     <section className="bg-[#02080B]">
@@ -51,8 +51,8 @@ const FundingRequests = () => {
                   Amount needed <span>Balance left</span>
                 </p>
                 <p className="flex justify-between text-[#5BDEF3]">
-                  {formatUnits(item.amount)} ETH
-                  <span>{formatUnits(item.balance)} ETH</span>
+                  {formatUnits(item.amount)} Avax
+                  <span>{formatUnits(item.balance)} Avax</span>
                 </p>
               </div>
             ))

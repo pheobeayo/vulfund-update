@@ -9,9 +9,9 @@ import TabPanel from "@mui/lab/TabPanel";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { TbFoldersOff } from "react-icons/tb";
 import { useWeb3ModalAccount } from "@web3modal/ethers/react";
-import useGetOrganization from "../../Hooks/useGetOrganization";
+import useGetAllOrganization from "../../Hooks/useGetAllOrganization";
 import { formatUnits } from "ethers";
-import useGetUserProposal from "../../Hooks/useGetUserProposal";
+import useGetProposals from "../../Hooks/useGetProposals";
 import { Link } from "react-router-dom";
 
 const APIURL = "https://api.studio.thegraph.com/query/72144/vulfund/v0.0.1";
@@ -35,8 +35,8 @@ const FundingRequests = () => {
   const [proposals, setProposals] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const userProposals = useGetUserProposal();
-  const allOrganization = useGetOrganization();
+  const allProposals = useGetProposals();
+  const organization = useGetAllOrganization();
 
   const convertIpfsUrl = (url) => {
     if (url && url.startsWith("ipfs://")) {
@@ -44,8 +44,6 @@ const FundingRequests = () => {
     }
     return url || "";
   };
-
-  const imageUrl = convertIpfsUrl(allOrganization[1]);
 
   const decodeHexString = (hexString) => {
     if (!hexString) return "";
@@ -132,47 +130,44 @@ const FundingRequests = () => {
                   All Funding Requests{" "}
                 </h2>
                 <div className="flex lg:flex-row md:flex-row flex-col justify-between items-center my-10 flex-wrap">
-                  {userProposals.length > 0 ? (
-                    userProposals.map((item, index) => (
-                      <div
-                        key={index}
-                        className="lg:w-[32%] md:w-[32%] w-[100%] p-4  border-white bg-[#191F1C]/5 rounded-xl border shadow-lg"
-                      >
-                        <img
-                          src={imageUrl}
-                          alt="projectphoto"
-                          className="w-[100%] h-[237px] object-cover object-center rounded-lg"
-                        />
-                        <h3 className="font-bold mt-4 lg:text-[20px] md:text-[20px] text-[18px] text-white ">
-                          {allOrganization[2]}
-                        </h3>
-                        <p className="text-white text-justify ">
-                          {item.description.slice(0, 40)}...
-                        </p>
-                        <p className="flex justify-between text-white">
-                          Amount needed <span>Balance left</span>
-                        </p>
-                        <p className="flex justify-between text-[#5BDEF3]">
-                          {formatUnits(item.amount)} ETH
-                          <span>{Number(item.balance)}ETH</span>
-                        </p>
-                        <Link
-                          to={`/dashboard/funding-requests/${item.proposalid}`}
-                        >
-                          <button className="bg-transparent my-4 border w-full py-2 px-4 border-white text-white rounded-lg">
-                            View details
-                          </button>
-                        </Link>
-                      </div>
-                    ))
-                  ) : (
-                    <p className="text-white text-center justify-center flex items-center w-[100%]">
-                      <TbFoldersOff className="mr-4 text-4xl" /> No projects
-                      available.
-                    </p>
-                  )}
+                    {allProposals.length > 0 ? (
+                      allProposals.map((item) => (
+                        <div key={item.proposalid} className="lg:w-[32%] md:w-[32%] w-[100%] p-4 border-white bg-[#191F1C]/5 rounded-xl border shadow-lg">
+                          {organization.map(
+                            (info) =>
+                              item.beneficiary === info[0] && (
+                                  <img
+                                    src={convertIpfsUrl(info[1])}
+                                    alt="projectphoto"
+                                    className="w-[100%] h-[237px] object-cover object-center rounded-lg"
+                                  />
+                              )
+                          )}
+                          <h3 className="font-bold mt-4 lg:text-[20px] md:text-[20px] text-[18px] text-white">
+                            {item.proposalTopic}
+                          </h3>
+                          <p className="text-white text-justify truncate">
+                            {item.description.slice(0, 40)}...
+                          </p>
+                          <p className="flex justify-between text-white">
+                            Amount needed <span>Balance left</span>
+                          </p>
+                          <p className="flex justify-between text-[#5BDEF3]">
+                            {formatUnits(item.amount)} Avax
+                            <span>{formatUnits(item.balance)} Avax</span>
+                          </p>
+                          <Link to={`/dashboard/funding-requests/${item.proposalid}`}>
+                            <button className="bg-transparent my-4 border w-full py-2 px-4 border-white text-white rounded-lg">
+                              View details
+                            </button>
+                          </Link>
+                        </div>
+                      ))
+                    ) : (
+                      <p className="text-white text-center justify-center flex items-center w-[100%]"><TbFoldersOff className="mr-4 text-4xl" /> No projects available.</p>
+                    )}
+                  </div>
                 </div>
-              </div>
             </TabPanel>
             <TabPanel value="two"></TabPanel>
           </TabContext>

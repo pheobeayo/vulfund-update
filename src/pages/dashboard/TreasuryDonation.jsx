@@ -102,10 +102,10 @@ const TreasuryDonation = () => {
                             Amount needed <span>Balance left</span>
                           </p>
                           <p className="flex justify-between text-[#5BDEF3]">
-                            {formatUnits(item.amount)} ETH
-                            <span>{formatUnits(item.balance)} ETH</span>
+                            {formatUnits(item.amount)} Avax
+                            <span>{formatUnits(item.balance)} Avax</span>
                           </p>
-                          <Link to={`funding-requests/${item.proposalid}`}>
+                          <Link to={`treasury-donation/${item.proposalid}`}>
                             <button className="bg-transparent my-4 border w-full py-2 px-4 border-white text-white rounded-lg">
                               View details
                             </button>
@@ -147,7 +147,7 @@ const TreasuryDonation = () => {
                       </p>
                       <p className="flex justify-between text-[#5BDEF3]">
                         {" "}
-                        1,500 USDT <span> 1,500 USDT</span>
+                        1,500 Avax <span> 1,500 Avax</span>
                       </p>
                       <button className="bg-transparent my-4 border w-[100%] py-2 px-4 border-white text-white rounded-lg">
                         View details
@@ -174,7 +174,7 @@ const TreasuryDonation = () => {
                       </p>
                       <p className="flex justify-between text-[#5BDEF3]">
                         {" "}
-                        1,500 USDT <span> 1,500 USDT</span>
+                        1,500 Avax <span> 1,500 Avax</span>
                       </p>
                       <button className="bg-transparent my-4 border w-[100%] py-2 px-4 border-white text-white rounded-lg">
                         View details
@@ -201,7 +201,7 @@ const TreasuryDonation = () => {
                       </p>
                       <p className="flex justify-between text-[#5BDEF3]">
                         {" "}
-                        1,500 USDT <span> 1,500 USDT</span>
+                        1,500 Avax <span> 1,500 Avax</span>
                       </p>
                       <button className="bg-transparent my-4 border w-[100%] py-2 px-4 border-white text-white rounded-lg">
                         View details
@@ -240,7 +240,7 @@ const TreasuryDonation = () => {
                       </p>
                       <p className="flex justify-between text-[#5BDEF3]">
                         {" "}
-                        1,500 USDT <span> 1,500 USDT</span>
+                        1,500 Avax <span> 1,500 Avax</span>
                       </p>
                       <button className="bg-transparent my-4 border w-[100%] py-2 px-4 border-white text-white rounded-lg">
                         View details
@@ -268,7 +268,7 @@ const TreasuryDonation = () => {
                       </p>
                       <p className="flex justify-between text-[#5BDEF3]">
                         {" "}
-                        1,500 USDT <span> 1,500 USDT</span>
+                        1,500 Avax <span> 1,500 Avax</span>
                       </p>
                       <button className="bg-transparent my-4 border w-[100%] py-2 px-4 border-white text-white rounded-lg">
                         View details
@@ -295,7 +295,7 @@ const TreasuryDonation = () => {
                       </p>
                       <p className="flex justify-between text-[#5BDEF3]">
                         {" "}
-                        1,500 USDT <span> 1,500 USDT</span>
+                        1,500 Avax <span> 1,500 Avax</span>
                       </p>
                       <button className="bg-transparent my-4 border w-[100%] py-2 px-4 border-white text-white rounded-lg">
                         View details
@@ -329,7 +329,7 @@ const TreasuryDonation = () => {
                     </p>
                     <p className="flex justify-between text-[#5BDEF3]">
                       {" "}
-                      1,500 USDT <span> 1,500 USDT</span>
+                      1,500 Avax <span> 1,500 Avax</span>
                     </p>
                     <button className="bg-transparent my-4 border w-[100%] py-2 px-4 border-white text-white rounded-lg">
                       View details
@@ -357,7 +357,7 @@ const TreasuryDonation = () => {
                     </p>
                     <p className="flex justify-between text-[#5BDEF3]">
                       {" "}
-                      1,500 USDT <span> 1,500 USDT</span>
+                      1,500 Avax <span> 1,500 Avax</span>
                     </p>
                     <button className="bg-transparent my-4 border w-[100%] py-2 px-4 border-white text-white rounded-lg">
                       View details
@@ -384,7 +384,7 @@ const TreasuryDonation = () => {
                     </p>
                     <p className="flex justify-between text-[#5BDEF3]">
                       {" "}
-                      1,500 USDT <span> 1,500 USDT</span>
+                      1,500 Avax <span> 1,500 Avax</span>
                     </p>
                     <button className="bg-transparent my-4 border w-[100%] py-2 px-4 border-white text-white rounded-lg">
                       View details

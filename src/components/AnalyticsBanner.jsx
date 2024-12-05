@@ -113,7 +113,7 @@ const Banner = () => {
                   {" "}
                   Total Donations(YTD)
                   <br />
-                  {Number(totalDonation) / 1e18} ETH
+                  {Number(totalDonation) / 1e18} Avax
                 </h1>
               </div>
             </div>

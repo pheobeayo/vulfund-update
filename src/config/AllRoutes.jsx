@@ -13,6 +13,7 @@ const Home = lazy(() => import("../pages/Home"));
 const HomeLayout = lazy(() => import('../layout/HomeLayout'));
 const Register = lazy(() => import('../pages/dashboard/Register'));
 const TreasuryDonation = lazy(() => import('../pages/dashboard/TreasuryDonation'));
+const TreasuryDonationDetails = lazy(() => import('../pages/dashboard/TreasuryProjectDetail'))
 const FundingRequests = lazy(() => import('../pages/dashboard/FundingRequests'));
 const ProjectDetail = lazy(() => import('../pages/ProjectDetail'));
 const DashboardLayout = lazy(() =>
@@ -37,6 +38,7 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route index element={<TreasuryDonation />} />
       <Route path="register" element={<Register />} />
       <Route path="treasury-donation" element={<TreasuryDonation />} />
+      <Route path="treasury-donation/:id" element={<TreasuryDonationDetails />} />
       <Route path="funding-requests" element={<FundingRequests />} />
       <Route path="funding-requests/:id" element={<ProjectDetail />} />
       <Route path="all-donations" element={<AllDonations />} />
