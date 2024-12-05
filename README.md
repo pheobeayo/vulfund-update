@@ -25,17 +25,17 @@ Vulfund addresses these issues by:
 
 
 ### Technology Stack
-•	Blockchain: For secured operations, the smart contract audited and deployed on Linea sepolia on:
+•	Blockchain: For secured operations, the smart contract audited and deployed on Avalanche on:
 
 ```bash
 
-VulfundNFT deployed at: 0x25d3195984A693886103312eA3FA53D738c951B7
+VulfundNFT deployed at: 0xeBed63D638Cb43BBa59380E5b7C9fbe53DC615bE
 
-VulfundV2 deployed at: 0x951fAa8B5E040DdC3f0489D00CF1E66be2355b25
+VulfundV2 deployed at: 0x48f0172086d1548B1c411a53C523721bb21DCB82
 
 ```
 
-•   Tools: Solidity, Bash, Foundry, Linea sepolia,
+•   Tools: Solidity, Bash, Foundry, Avalanche,
 
 •	Frontend Framework: React, Tailwind CSS, Apollo Client, Graph, Ethers, Web3modal, Foundry, Vite
 
