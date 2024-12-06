@@ -166,8 +166,7 @@ const TreasuryDonation = () => {
                       </h3>
                       <p className="text-white text-justify">
                         {" "}
-                        Financial support for medical supplies and monthly
-                        health checkups for elderly residents.
+                        Financial support for medical supplies for elderly residents.
                       </p>
                       <p className="flex justify-between">
                         Amount needed <span>Amount Raised</span>
@@ -260,8 +259,7 @@ const TreasuryDonation = () => {
                       </h3>
                       <p className="text-white text-justify">
                         {" "}
-                        Financial support for medical supplies and monthly
-                        health checkups for elderly residents.
+                        Financial support for medical supplies for elderly residents.
                       </p>
                       <p className="flex justify-between">
                         Amount needed <span>Amount Raised</span>
@@ -349,8 +347,7 @@ const TreasuryDonation = () => {
                     </h3>
                     <p className="text-white text-justify">
                       {" "}
-                      Financial support for medical supplies and monthly health
-                      checkups for elderly residents.
+                      Financial support for medical supplies for elderly residents.
                     </p>
                     <p className="flex justify-between">
                       Amount needed <span>Amount Raised</span>
