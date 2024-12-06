@@ -45,12 +45,12 @@ VulfundV2 deployed at: 0x48f0172086d1548B1c411a53C523721bb21DCB82
 ## Repository: 
 ``` bash
 
-https://github.com/pheobeayo/vulfund-upgrade
+https://github.com/pheobeayo/vulfund-update
 
 ```
 ### MVP Deployment: 
 ```bash
-https://vulfund-upgrade.vercel.app/
+https://vulfund-update.vercel.app/
 ```
 ### Demo Video: 
 ```bash
