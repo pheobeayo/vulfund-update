@@ -55,7 +55,7 @@ const ProjectDetail = () => {
   console.log(details)
 
   return (
-    <main className="bg-[#02080B] w-[85vw]">
+    <main className="bg-[#02080B] w-[87vw]">
       <div
         className="bg-[#02080B]  bg-no-repeat w-[100%] md:w-[100%] lg:w-[100%]"
         style={{
@@ -65,7 +65,7 @@ const ProjectDetail = () => {
         }}
       >
         <div className="flex justify-between flex-col lg:flex-row md:flex-row items-center px-8 lg:px-40 md:px-40 h-[110vh]">
-          <div className="lg:w-[45%] md:w-[45%] w-[100%] h-full  mx-auto text-center lg:px-0 md:px-0 ">
+          <div className="lg:w-[45%] md:w-[45%] w-[100%] h-full mt-3 mx-auto text-center lg:px-0 md:px-0 ">
             {organization.map(
               (info) =>
                 details.beneficiary === info[0] && (
@@ -96,7 +96,7 @@ const ProjectDetail = () => {
               Request
             </h1>
           </div>
-          <div className="lg:w-[50%] md:w-[50%] w-[90%]  bg-[#02080B] h-full">
+          <div className="lg:w-[45%] md:w-[45%] w-[100%]  bg-[#02080B] h-full">
             <div className="bg-[#0A1F28] rounded-xl p-4  my-4">
               <h1 className="px-4 lg:px-2 md:px-0 lg:text-[24px] md:text-[24px] text-[20px] font-serif text-white font-bold mt-4 my-10">
                 Poll Overview
