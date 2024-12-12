@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className="py-8 bg-[#02080B]">
-      <div className="w-[100vw] mx-auto lg:flex md:flex justify-between hidden font-montserrat">
+      <div className="w-[90%] mx-auto lg:flex md:flex justify-between hidden font-montserrat">
         <img src={logo} alt="" className="w-[235px] h-[43px]" />
         <nav>
           <NavLink
@@ -34,14 +34,12 @@ const Header = () => {
 
           <button
             onClick={handleConnect}
-            className="text-white hover:text-[#5CE3FB] hover:font-[700] mr-10 text-[18px]"
+            className="text-white hover:text-[#5CE3FB] hover:font-[700]  text-[18px]"
           >
             Register for Funding
           </button>
         </nav>
-        <div className="mr-8 xl:mr-8 2xl:mr-8 lg:mr-8 md:mr-8">
-          <w3m-button />
-        </div>
+        <w3m-button />
       </div>
       <div className="w-[95%] mx-auto flex justify-between lg:hidden md:hidden relative">
         <img src={logo} alt="" className="w-[185px] h-[43px]" />
