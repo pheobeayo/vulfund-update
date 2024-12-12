@@ -39,7 +39,7 @@ const Header = () => {
             Register for Funding
           </button>
         </nav>
-        <div className="mr-8 lg:mr-8 md:mr-8">
+        <div className="mr-8 xl:mr-8 2xl:mr-8 lg:mr-8 md:mr-8">
           <w3m-button />
         </div>
       </div>
